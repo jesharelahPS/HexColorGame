@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HexColorGame.HomePage"
+             BackgroundColor="#1B342E"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="Auto,*" Padding="0">
+
+        <VerticalStackLayout Spacing="0"
+                             Padding="0,100,0,-30"
+                             HorizontalOptions="Center"
+                             Grid.Row="0"
+                             WidthRequest="300">
+            <Label Text="Hex Color Game"
+                   FontSize="40"
+                   TextColor="#DAA520"
+                   FontFamily="CinzelDecorativeBold"
+                   CharacterSpacing="2"
+                   Shadow="2,2,6,#220000"
+                   HorizontalTextAlignment="Center"
+                   LineBreakMode="WordWrap"
+                   LineHeight="0.9"/>
+
+            <Label Text="A Peasant's Adventure"
+                   FontSize="20"
+                   Padding="0,20,0,0"
+                   TextColor="#DAA520"
+                   Shadow="2,2,6,#220000"
+                   FontFamily="CinzelDecorativeRegular"
+                   HorizontalTextAlignment="Center"
+    
+                   LineBreakMode="WordWrap"/>
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout Grid.Row="1"
+                             Spacing="20"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Margin="0,-70,0,100">
+
+            <!-- Play Button -->
+            <Border BackgroundColor="#DAA520"
+                    Stroke="#B8860B"
+                    StrokeThickness="3"
+                    WidthRequest="200"
+                    HeightRequest="55"
+                    Shadow="3,3,8,#33000000"
+                    StrokeShape="RoundRectangle 16">
+                <Button Text="Play"
+                        FontSize="28"
+                        FontFamily="CinzelDecorativeBold"
+                        TextColor="#1B342E"
+                        BackgroundColor="Transparent"
+                        Clicked="OnPlayClicked"/>
+            </Border>
+
+            <!-- Exit Button -->
+            <Border BackgroundColor="#880E4F"
+                    Stroke="#AD1457"
+                    StrokeThickness="3"
+                    WidthRequest="200"
+                    HeightRequest="55"
+                    Shadow="3,3,8,#33000000"
+                    StrokeShape="RoundRectangle 16">
+                <Button Text="Exit"
+                        FontSize="22"
+                        FontFamily="CinzelDecorativeBold"
+                        TextColor="WhiteSmoke"
+                        BackgroundColor="Transparent"
+                        Clicked="OnExitClicked"/>
+            </Border>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

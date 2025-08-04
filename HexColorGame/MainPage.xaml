@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HexColorGame.MainPage"
+             BackgroundColor="#1B342E"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+
+        <!-- Settings Icon -->
+        <ImageButton Source="settings.png"
+                     HorizontalOptions="End"
+                     VerticalOptions="Start"
+                     Margin="0,20,20,0"
+                     BackgroundColor="Transparent"
+                     WidthRequest="40"
+                     HeightRequest="40"
+                     Clicked="OnSettingsClicked"/>
+
+        <!-- Main Content -->
+        <VerticalStackLayout Spacing="22"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Margin="0,60,0,40"
+                             WidthRequest="280">
+
+            <!-- Title -->
+            <VerticalStackLayout Spacing="2"
+                                 HorizontalOptions="Center"
+                                 Margin="0,-80,0,40">
+                <Label Text="Choose Your"
+                       FontSize="28"
+                       TextColor="#DAA520"
+                       FontFamily="CinzelDecorativeRegular"
+                       HorizontalOptions="Center"
+                       CharacterSpacing="1"/>
+                <Label Text="Champion"
+                       FontSize="40"
+                       TextColor="#DAA520"
+                       FontFamily="CinzelDecorativeBlack"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Shadow="2,2,4,#553300"
+                       CharacterSpacing="1"/>
+            </VerticalStackLayout>
+
+            <!-- Knight Button -->
+            <Border BackgroundColor="#880E4F"
+                    Stroke="#AD1457"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 32"
+                    Shadow="3,3,6,#55000000"
+                    HeightRequest="55">
+                <Grid ColumnDefinitions="Auto,*" Padding="12,0">
+                    <Image Source="knight.png"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           VerticalOptions="Center"
+                           Margin="33,0,0,0"/>
+                    <Button Text="Knight"
+                            FontFamily="CinzelDecorativeBold"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            FontSize="24"
+                            Clicked="GoToKnight"
+                            Grid.Column="1"
+                            HorizontalOptions="Start" />
+                </Grid>
+            </Border>
+
+            <!-- Dragon Button -->
+            <Border BackgroundColor="#880E4F"
+                    Stroke="#AD1457"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 32"
+                    Shadow="3,3,6,#55000000"
+                    HeightRequest="55">
+                <Grid ColumnDefinitions="Auto,*" Padding="12,0">
+                    <Image Source="dragon.png"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           VerticalOptions="Center"
+                           Margin="33,0,0,0"/>
+                    <Button Text="Dragon"
+                            FontFamily="CinzelDecorativeBold"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            FontSize="24"
+                            Clicked="GoToDragon"
+                            Grid.Column="1"
+                            HorizontalOptions="Start" />
+                </Grid>
+            </Border>
+
+            <!-- King Button -->
+            <Border BackgroundColor="#880E4F"
+                    Stroke="#AD1457"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 32"
+                    Shadow="3,3,6,#55000000"
+                    HeightRequest="55">
+                <Grid ColumnDefinitions="Auto,*" Padding="12,0">
+                    <Image Source="king.png"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           VerticalOptions="Center"
+                           Margin="33,0,0,0"/>
+                    <Button Text="King"
+                            FontFamily="CinzelDecorativeBold"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            FontSize="24"
+                            Clicked="GoToKing"
+                            Grid.Column="1"
+                            HorizontalOptions="Start" />
+                </Grid>
+            </Border>
+
+            <!-- Back Button -->
+            <Border BackgroundColor="#444"
+                    Stroke="#666"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 32"
+                    Shadow="3,3,6,#44000000"
+                    HeightRequest="45"
+                    Margin="0,20,0,0">
+                <Grid Padding="12,0">
+                    <Button Text="Back"
+                            FontFamily="CinzelDecorativeRegular"
+                            TextColor="#DDD"
+                            BackgroundColor="Transparent"
+                            FontSize="18"
+                            Clicked="OnBackClicked" />
+                </Grid>
+            </Border>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
